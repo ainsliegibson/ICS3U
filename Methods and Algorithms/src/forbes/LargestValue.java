@@ -16,6 +16,7 @@ public class LargestValue {
 			stupidArray [n] = sc.nextInt();
 		}
 			largestValue(stupidArray);
+			System.out.println(largestValue(stupidArray));
 			sc.close();
 	}
 	public static int largestValue(int [] numbers){

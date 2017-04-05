@@ -16,6 +16,7 @@ public class GreatestCommonMultiple {
 		System.out.println("Please entre an other number");
 		int m =sc.nextInt();
 		greatestCommonMultiple(n, m);
+		System.out.println(greatestCommonMultiple(n, m));
 		sc.close();
 	}
 	public static int greatestCommonMultiple(int num1, int num2){

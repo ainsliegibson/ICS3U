@@ -11,9 +11,11 @@ import java.util.Scanner;
 public class Factorial {
 	public static void main (String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Please entre a number");
+		//Imputing a number
+		System.out.println("Please enter a number");
 		int n = sc.nextInt();
 		factorial(n);
+		System.out.println(factorial(n));
 		sc.close();
 	}
 	public static int factorial(int num){
@@ -23,6 +25,7 @@ public class Factorial {
 		}
 		else if (num < 0){
 			return -1;
+			//error
 		}
 		else{
 			while (num > 0){

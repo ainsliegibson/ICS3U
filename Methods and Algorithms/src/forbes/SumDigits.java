@@ -15,6 +15,7 @@ public class SumDigits {
 		System.out.println("Please entre a number");
 		int m = sc.nextInt();
 		sumOfDigits(m);
+		System.out.println(sumOfDigits(m));
 		sc.close();
 	}
 	
