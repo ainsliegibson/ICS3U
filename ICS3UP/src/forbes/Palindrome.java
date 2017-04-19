@@ -1,6 +1,6 @@
 package forbes;
 /** Palindrome.java
- * This program determines if a sentence is a Palindrome and returns true or false;
+ * This program determines if a sentence is a Palindrome and returns true or false
  * @author ainslieforbes
  * Apr 19
  */
@@ -10,18 +10,26 @@ public class Palindrome {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Please enter a sentence");//Get sentence
-		String sentence = sc.nextLine();
+		String sentence = null;//input variable
+		for(int m = 1; m > 0; m--){//exitAndLoop method
+			System.out.println("Please enter a sentence");//get sentence
+			sentence = sc.nextLine();
+			if ((isEnter(sentence)) == false){
+				System.out.println(sentence);	
+				m = 2;
+				String word = noSpace(sentence);//send to noSpace method
+				System.out.println(isPalindrome(word)); 
+				//sent to isPalindrome and print true or false to console 
+			}
+
+		}
 		sc.close();
-		String word = noSpace(sentence);//send to noSpace method
-		System.out.println(isPalindrome(word)); 
-		//sent to isPalindrome and print true or false to console 
 	}
 	public static boolean isPalindrome(String letters){ 
 		//determines if the sentence is palindrome
 		int n = letters.length() - 1; 
 		//counting variable will start at the end of the sentence
-		
+
 		for (int i = 0; i < letters.length(); i++){ 
 			//for loop will start at the beginning of the sentence
 			// comparing the first and last letter of the sentence
@@ -52,5 +60,14 @@ public class Palindrome {
 			//if not a capital letter it will be skipped and not added to the new String
 		}
 		return space;//sends the new String with only capital letters
+	}
+	public static boolean isEnter(String nothing){
+		//loops until user presses enter without letter/number
+		if (nothing.equals("")){//check if there is an enter
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 }
