@@ -1,5 +1,9 @@
 package forbes;
-
+/** PerfectInteger.java
+ * This program all the perfect integers
+ * @author ainslieforbes
+ * Apr 20
+ */
 //import java.util.Scanner;
 
 public class PerfectInteger {
